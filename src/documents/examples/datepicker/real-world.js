@@ -3,7 +3,6 @@ YUI({ lang: 'ja' }).use(
   function(Y) {
     var datepicker = new Y.DatePicker(
       {
-        trigger: 'input',
         mask: '%a, %b %d, %Y',
         popover: {
           toolbars: {
@@ -29,6 +28,7 @@ YUI({ lang: 'ja' }).use(
               }
             ]]
           },
+          trigger: 'input',
           zIndex: 1
         }
       }

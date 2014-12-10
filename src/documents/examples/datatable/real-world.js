@@ -96,9 +96,9 @@ YUI().use(
           {
             editable: true,
             options: {
-              yes: 'Yes',
+              maybe: 'Maybe',
               no: 'No',
-              maybe: 'Maybe'
+              yes: 'Yes'
             }
           }
         ),
@@ -110,9 +110,9 @@ YUI().use(
             editable: true,
             multiple: true,
             options: {
-              red: 'Red',
+              blue: 'Blue',
               green: 'Green',
-              blue: 'Blue'
+              red: 'Red'
             }
           }
         ),

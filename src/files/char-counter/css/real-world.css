@@ -1,22 +1,22 @@
 .twitter-box {
+  background: url(../img/twitter-box.png);
+  height: 211px;
   position: relative;
   width: 530px;
-  height: 211px;
-  background: url(../img/twitter-box.png);
 }
 
 #myCounter {
-  position: absolute;
   bottom: 15px;
+  color: #999;
+  position: absolute;
   right: 95px;
   text-align: center;
-  color: #999;
 }
 
 #myTextarea {
+  height: 75px;
+  left: 20px;
   position: absolute;
   top: 60px;
-  left: 20px;
   width: 475px;
-  height: 75px;
 }
