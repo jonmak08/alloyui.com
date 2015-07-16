@@ -1,0 +1,238 @@
+---
+title: Menu
+description: Create a responsive menu bar with support for submenus.
+api: http://alloyui.com/api/modules/aui-menu.html
+layout: single-example
+category: Examples
+intro: true
+featuringOrder: 1
+---
+
+#### Getting Started
+
+First load the seed and CSS files, if you haven't yet.
+
+```html
+<script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getBootstrapCSS() %>" rel="stylesheet"></link>
+```
+
+Then initialize AlloyUI and load the Menu module.
+
+``` javascript
+YUI().use(
+  'aui-menu',
+  function(Y) {
+	// code goes here
+  }
+);
+```
+
+---
+
+#### Using Menu
+
+There are two ways to create a Menu: from markup or from script.
+
+<b> Create Menu from Markup </b>
+
+To start, we make an unordered list to create the navigation bar. The `li` elements in this list will show up as buttons on the navigation bar. Notice the classes `nav` and `navbar-nav` that are used. These are bootstrap classes that we include to give the navigation bar some basic styling like displaying the items horizontally. Also notice that we use the id `menu1`. This will be useful later when we write our AUI script.
+
+```html
+<ul class="nav navbar-nav">
+	<li id="menu1">
+		<!-- Navbar items go here -->
+	</li>
+</ul>
+```
+
+We could have only links on the navigation bar, which would mean we would just nest `a` elements inside of the `li` elements.
+
+```html
+<ul class="nav navbar-nav">
+	<li id="menu1">
+		<a> Menu 1</a>
+	</li>
+</ul>
+```
+
+Let's go one step further and make a dropdown menu. To do so, we create another unordered list inside of our `li` element, and populate it with the links that we want. The classes `dropdown-menu` and `menu-item` are very important to include; the menu might not render correctly without these classes. We also add some information to our original `a` element so that clicking on this will open the dropdown menu.
+
+```html
+<ul class="nav navbar-nav">
+	<li id="menu1">
+		<a id="trigger" class="dropdown-toggle" data-toggle="dropdown">
+			Menu 1 <b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li class="menu-item">
+				<a>Menu Item 1</a>
+			</li>
+			<li class="menu-item">
+				<a>Menu Item 2</a>
+			</li>
+			<li class="menu-item">
+				<a>Menu Item 3</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+```
+
+Lastly we will need to write our Alloy UI code to create an instance of Menu. We use  the `boundingBox` and `contentBox` attributes to place the menu in the correct spot on the page, then use the `trigger` attribute to set the dropdown functionality, and render it!
+
+```javascript
+YUI().use(
+	'aui-menu',
+	function(Y) {
+		new Y.Menu({
+			boundingBox: '#menu1',
+			contentBox: '#menu1',
+			trigger: '#trigger'
+		}).render();
+	}
+);
+```
+
+<b> Create Menu from Script </b>
+
+When creating a menu from script, we still need to have a placeholder in the markup. We use the same `ul.nav.navbar-nav` unordered list to represent the navigation bar. We still want to have a dropdown menu, so we add one `li` element with an `a` link that will trigger the menu display, and create the `ul.dropdown-menu` element to hold the menu contents. However, this time we do not need to specify the individual links in the markup. These will be created in the script.
+
+```html
+<ul class="nav navbar-nav">
+	<li id="menu2">
+		<a id="trigger2" class="dropdown-toggle" data-toggle="dropdown">Menu 2<b class="caret"></b></a>
+		<ul class="dropdown-menu"></ul>
+	</li>
+</ul>
+```
+
+Then we move to the `<script>` section. We start with the same code as for the markup version: we set the `boundingBox` and `contentBox` properties so the menu is placed in the correct spot on the page, then use the `trigger` attribute to create the dropdown behavior, and render it.
+
+```javascript
+YUI().use(
+	'aui-menu',
+	function(Y) {
+		new Y.Menu({
+			boundingBox: '#menu2',
+			contentBox: '#menu2',
+			trigger: '#trigger2'
+		}).render();
+	}
+);
+```
+
+In addition, we create the actual menu content using the `items` property. For each of the links we want to have in our menu, we create an object with the `content` attribute set to that link. After this step, we will have an identical menu to the one we created with the html markup.
+
+```javascript
+YUI().use(
+	'aui-menu',
+	function(Y) {
+		new Y.Menu({
+			boundingBox: '#menu2',
+			contentBox: '#menu2',
+			items: [
+				{
+					content: '<a>Menu Item 1</a>'
+				},
+				{
+					content: '<a>Menu Item 2</a>'
+				},
+				{
+					content: '<a>Menu Item 3</a>'
+				}
+			],
+			trigger: '#trigger2'
+		}).render();
+	}
+);
+```
+
+This script approach can be used outside of a menubar, to create a pop-up menu for instance. To do so, we still have to make a placeholder for the menu and a trigger inside of the markup. The javascript is identical except there is no `contentBox` attribute.
+
+```html
+<a id="trigger3" class="dropdown-toggle" data-toggle="dropdown">Pop-up Menu</a>
+<div id="menu3"></div>
+```
+
+```javascript
+YUI().use(
+	'aui-menu',
+	function(Y) {
+		new Y.Menu({
+			boundingBox: '#menu3',
+			items: [
+				{
+					content: '<a>Menu Item 1</a>'
+				},
+				{
+					content: '<a>Menu Item 2</a>'
+				},
+				{
+					content: '<a>Menu Item 3</a>'
+				}
+			],
+			trigger: '#trigger3'
+		}).render();
+	}
+);
+```
+---
+
+#### Configuring Menu
+
+If using the script appraoch, there are some additional attributes we can use with the menu items. The `submenu` attribute allows us to nest more menus inside. We can also add a `shortcut` to select a given item with the keyboard. Finally, if we set the `disabled` attribute to `true`, this link will be visible but users will not be able to be click on it.
+
+```javascript
+YUI().use(
+	'aui-menu',
+	function(Y) {
+		new Y.Menu({
+			boundingBox: '#menu2',
+			contentBox: '#menu2',
+			items: [
+				{
+					content: '<a>Menu Item 1</a>',
+					submenu: {
+						items: [
+							{
+								content: '<a>Menu Item 1.1</a>'
+							},
+							{
+								content: '<a>Menu Item 1.2</a>'
+							}
+						]
+					}
+				},
+				{
+					content: '<a>Menu Item 2</a>',
+					shortcut: {
+						shiftKey: true,
+						keys: ['J', 'j'],
+						text: 'Shift + J'
+					}
+				},
+				{
+					content: '<a>Menu Item 3</a>',
+					disabled: true
+				}
+			],
+			trigger: '#trigger2'
+		}).render();
+	}
+);
+```
+
+Also, if we want to create a horizontal divider between items in a menu, there are options for both the markup and script versions. For the markup version, we add a `li` element at the place we want with the class `menu-item-divider`. For the script version, we add an object to our `items` with the `divider` attribute set to `true`.
+
+```html
+<li class="menu-item divider"></li>
+```
+
+```javascript
+items: [
+	{
+		divider: true
+	}
+]
+```
