@@ -12,7 +12,7 @@ weight: 200
 {template .render}
   <div class="main">
     <main class="content">
-      <div class="tutorials">
+      <div class="docs tutorials">
         {call Topbar.render data="all"}
           {param elementClasses: 'topbar-docs' /}
         {/call}
@@ -31,15 +31,15 @@ weight: 200
  */
 {template .topics}
   <div class="sidebar-offset">
-    <div class="container-hybrid examples-home-top">
+    <div class="container-hybrid docs-home-top">
       <div class="row">
         <div class="col-xs-16">
-          <h1 class="examples-home-top-title">{$page.title}</h1>
-          <p class="examples-home-top-description">Start learning how to leverage the power of {$site.title}.</p>
+          <h1 class="docs-home-top-title">{$page.title}</h1>
+          <p class="docs-home-top-description">Start learning how to leverage the power of {$site.title}.</p>
         </div>
       </div>
       <div class="row">
-        <div class="container-hybrid examples-home-top-form">
+        <div class="container-hybrid docs-home-top-form">
           <form action="/docs/search.html" method="GET" enctype="multipart/form-data">
             <div class="row">
               <div class="col-xs-14 col-xs-offset-1 col-md-10 col-md-offset-3 col-lg-6 col-lg-offset-5">
@@ -56,13 +56,13 @@ weight: 200
         </div>
       </div>
     </div>
-    <div class="examples-home-topics">
+    <div class="docs-home-topics">
       <div class="container-hybrid">
         <div class="row">
           <div class="col-xs-14 col-xs-offset-1 ">
-            <section class="examples-home-middle">
-              <h2 class="examples-home-middle-subtitle">Choose a Guide</h2>
-              <p class="examples-home-middle-description">Each one provide step by step coverage for every core feature.</p>
+            <section class="docs-home-middle">
+              <h2 class="docs-home-middle-subtitle">Choose a Guide</h2>
+              <p class="docs-home-middle-description">Each one provide step by step coverage for every core feature.</p>
             </section>
           </div>
         </div>

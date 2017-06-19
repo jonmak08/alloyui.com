@@ -7,7 +7,7 @@
 {template .render}
 	<div class="main">
 		<main class="guide">
-			<div class="tutorials">
+			<div class="docs tutorials">
 				{call Topbar.render data="all"}
 					{param elementClasses: 'topbar-docs' /}
 				{/call}
@@ -35,8 +35,8 @@
 		</header>
 
 		<div class="container-hybrid">
-			<div class="tutorials-guide row">
-				<div class="tutorials-content col-xs-16 col-md-9">
+			<div class="docs-guide row">
+				<div class="docs-content col-xs-16 col-md-9">
 					<div class="guide-content">
 						{$content}
 					</div>
@@ -49,7 +49,7 @@
 				<nav class="col-xs-16 col-md-offset-2 col-md-5">
 					<div class="tutorials-nav-container">
 						{call ElectricReadingProgress.render}
-							{param elementClasses: 'tutorials-nav' /}
+							{param elementClasses: 'docs-nav' /}
 							{param offsetTop: 200 /}
 						{/call}
 					</div>
