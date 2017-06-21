@@ -2,7 +2,7 @@
 title: Affix
 description: What is the affix component?
 layout: "guide"
-weight: 200
+weight: 100
 ---
 
 ###### {$page.description}
