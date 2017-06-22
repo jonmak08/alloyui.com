@@ -129,7 +129,7 @@ For more information about configuration, check out our <a href="http://alloyui.
     'aui-io-request',
     function (Y) {
       Y.io.request(
-        '/data/IO/basic-example.html',
+        '/data/io/basic-example.html',
         {
           on: {
             success: function() {
@@ -208,7 +208,7 @@ YUI().use(
     'node',
     function(Y) {
       Y.io.request(
-        '/data/IO/rw-example.json',
+        '/data/io/rw-example.json',
         {
           dataType: 'json',
           on: {
@@ -235,7 +235,7 @@ YUI().use(
           }
           if (cityCode !== '') {
             Y.io.request(
-              '/data/IO/' + cityCode + '.json',
+              '/data/io/' + cityCode + '.json',
               {
                 dataType: 'json',
                 on: {
