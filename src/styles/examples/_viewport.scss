@@ -1,0 +1,56 @@
+// Viewport
+
+.myViewport {
+	margin-top: 60px;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+	-o-transition: 0.5s ease-in;
+	-ms-transition: 0.5s ease-in;
+	transition: 0.5s ease-in;
+
+	&:after {
+		background: #333;
+		border-radius: 3px;
+		color: #fff;
+		font-size: 1.5em;
+		margin-top: -50px;
+		position: absolute;
+		padding: 10px;
+		text-shadow: -1px -1px #000;
+
+		.view-lt320 &, .view-320 & {
+			content: 'Smart Phone (320px)';
+		}
+		.view-480 & {
+			content: 'Smart Phone Landscape (480px)';
+		}
+		.view-720 & {
+			content: 'Tablet (720px)';
+		}
+		.view-960 & {
+			content: 'Desktop (>= 960px)';
+		}
+	}
+
+	.view-lt320 &, .view-320 & {
+		background: url(http://www.alloyui.com/viewport/img/phone_portrait.png) no-repeat;
+		height: 105px;
+		width: 54px;
+	}
+	.view-480 & {
+		background: url(http://www.alloyui.com/viewport/img/phone_landscape.png) no-repeat;
+		height: 52px;
+		width: 102px;
+	}
+	.view-720 & {
+		background: url(http://www.alloyui.com/viewport/img/tablet_portrait.png) no-repeat;
+		height: 145px;
+		width: 114px;
+	}
+	.view-960 & {
+		background: url(http://www.alloyui.com/viewport/img/desktop.png) no-repeat;
+		height: 167px;
+		width: 207px;
+	}
+}
+
