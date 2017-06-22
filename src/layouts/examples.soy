@@ -7,11 +7,11 @@
 {template .render}
 	<div class="main">
 		<main class="guide">
-			<div class="examples">
+			<div class="docs examples">
 				{call Topbar.render data="all"}
 					{param elementClasses: 'topbar-docs' /}
 				{/call}
-				{call Sidebar.render}
+				{call ExamplesSidebar.render}
 					{param section: $site.index.children['examples'] /}
 				{/call}
 				{call .guide data="all" /}
@@ -35,8 +35,8 @@
 		</header>
 
 		<div class="container-hybrid">
-			<div class="examples-guide row">
-				<div class="examples-content col-xs-16 col-md-9">
+			<div class="docs-guide row">
+				<div class="docs-content col-xs-16 col-md-9">
 					<div class="guide-content">
 						{$content}
 					</div>
@@ -47,9 +47,9 @@
 				</div>
 
 				<nav class="col-xs-16 col-md-offset-2 col-md-5">
-					<div class="examples-nav-container">
+					<div class="docs-nav-container">
 						{call ElectricReadingProgress.render}
-							{param elementClasses: 'examples-nav' /}
+							{param elementClasses: 'docs-nav' /}
 							{param offsetTop: 200 /}
 						{/call}
 					</div>
