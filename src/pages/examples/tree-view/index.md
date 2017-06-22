@@ -168,7 +168,15 @@ YUI().use(
 
 ## Basic Example
 
-<div id="myBasicTreeView"></div>
+<style>
+{literal}
+.myTreeView {
+  margin: 10px 5px;
+}
+{/literal}
+</style>
+
+<div class="myTreeView one"></div>
 
 <script type="text/javascript">
 {literal}
@@ -194,7 +202,7 @@ YUI().use(
     ];
     new Y.TreeView(
       {
-        boundingBox: '#myBasicTreeView',
+        boundingBox: '.one',
         children: children
       }
     ).render();
@@ -250,7 +258,7 @@ YUI().use(
 
 ## Real World Example
 
-<div id="myTreeView"></div>
+<div class="myTreeView two"></div>
 
 <script type="text/javascript">
 {literal}
@@ -259,7 +267,7 @@ YUI().use(
   function(Y) {
     new Y.TreeViewDD(
       {
-        boundingBox: '#myTreeView',
+        boundingBox: '.two',
         children: [
           {
             children: [

@@ -4,7 +4,6 @@ description: A collection of buttons that offer the ability of managed user inte
 layout: "examples"
 weight: 100
 ---
-<script src="http://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
 
 ###### {$page.description}
 
@@ -129,6 +128,15 @@ YUI().use(
 <article id="4">
 
 ## Basic Example
+<style>
+{literal}
+.btn {
+  font-size: 14px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+}
+{/literal}
+</style>
 
 <div id="myToolbar" class="toolbar">
   <button class="btn btn-default"><span class="glyphicon glyphicon-print"></span></button>
@@ -271,7 +279,7 @@ YUI().use(
 <div id="myTreeView"></div>
 ```
 
-### JavaScript
+##### JavaScript
 
 ```javascript
 YUI().use(

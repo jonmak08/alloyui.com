@@ -6,35 +6,36 @@ weight: 100
 ---
 
 <style>
-.view-lt320 .myViewport, .view-320 .myViewport {lb}
+{literal}
+.view-lt320 .myViewport, .view-320 .myViewport {
     width: 54px;
     height: 105px;
     background: url(http://www.alloyui.com/viewport/img/phone_portrait.png) no-repeat;
-{rb}
-.view-480 .myViewport {lb}
+}
+.view-480 .myViewport {
     width: 102px;
     height: 52px;
     background: url(http://www.alloyui.com/viewport/img/phone_landscape.png) no-repeat;
-{rb}
-.view-720 .myViewport {lb}
+}
+.view-720 .myViewport {
     width: 114px;
     height: 145px;
     background: url(http://www.alloyui.com/viewport/img/tablet_portrait.png) no-repeat;
-{rb}
-.view-960 .myViewport {lb}
+}
+.view-960 .myViewport {
     width: 207px;
     height: 167px;
     background: url(http://www.alloyui.com/viewport/img/desktop.png) no-repeat;
-{rb}
-.myViewport {lb}
+}
+.myViewport {
     margin-top: 60px;
     -webkit-transition: 0.5s ease-in;
     -moz-transition: 0.5s ease-in;
     -o-transition: 0.5s ease-in;
     -ms-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
-{rb}
-.myViewport:after {lb}
+}
+.myViewport:after {
     background: #333;
     border-radius: 3px;
     color: #fff;
@@ -43,39 +44,40 @@ weight: 100
     position: absolute;
     padding: 10px;
     text-shadow: -1px -1px #000;
-{rb}
-.view-lt320 .myViewport:after, .view-320 .myViewport:after {lb}
+}
+.view-lt320 .myViewport:after, .view-320 .myViewport:after {
     content: 'Smart Phone (320px)';
-{rb}
-.view-480 .myViewport:after {lb}
+}
+.view-480 .myViewport:after {
     content: 'Smart Phone Landscape (480px)';
-{rb}
-.view-720 .myViewport:after {lb}
+}
+.view-720 .myViewport:after {
     content: 'Tablet (720px)';
-{rb}
-.view-960 .myViewport:after {lb}
+}
+.view-960 .myViewport:after {
     content: 'Desktop (>= 960px)';
-{rb}
-.view-lt320 .myViewport, .view-320 .myViewport {lb}
+}
+.view-lt320 .myViewport, .view-320 .myViewport {
     background: url(http://www.alloyui.com/viewport/img/phone_portrait.png) no-repeat;
     height: 105px;
     width: 54px;
-{rb}
-.view-480 .myViewport {lb}
+}
+.view-480 .myViewport {
     background: url(http://www.alloyui.com/viewport/img/phone_landscape.png) no-repeat;
     height: 52px;
     width: 102px;
-{rb}
-.view-720 .myViewport {lb}
+}
+.view-720 .myViewport {
     background: url(http://www.alloyui.com/viewport/img/tablet_portrait.png) no-repeat;
     height: 145px;
     width: 114px;
-{rb}
-.view-960 .myViewport {lb}
+}
+.view-960 .myViewport {
     background: url(http://www.alloyui.com/viewport/img/desktop.png) no-repeat;
     height: 167px;
     width: 207px;
-{rb}
+}
+{/literal}
 </style>
 
 ###### {$page.description}
@@ -200,7 +202,7 @@ YUI().use(
 );
 ```
 
-#### CSS
+##### CSS
 
 ```css
 .view-lt320 .myViewport,

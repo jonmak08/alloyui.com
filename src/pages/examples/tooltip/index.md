@@ -128,6 +128,14 @@ YUI().ready(
 
 ## Basic Example
 
+<style>
+{literal}
+.tooltip-help {
+    z-index: 1 !important;
+}
+{/literal}
+</style>
+
 <button id="myTooltip" title="One fine body…" class="btn btn-large btn-primary">Mouseover to show a top tooltip</button>
 
 <script type="text/javascript">
@@ -146,12 +154,14 @@ YUI().use(
 {/literal}
 </script>
 
-HTML:
+##### HTML
+
 ```xml
 <button id="myTooltip" title="One fine body…" class="btn btn-large btn-primary">Mouseover to show a top tooltip</button>
 ```
 
-JavaScript:
+##### JavaScript
+
 ```javascript
 YUI().use(
   'aui-tooltip',
@@ -171,6 +181,18 @@ YUI().use(
 <article id="5">
 
 ## Real World Example
+
+<style>
+{literal}
+#myTooltipDelegate {
+  width: 100px;
+}
+
+#myTooltipDelegate li {
+  cursor: pointer;
+}
+{/literal}
+</style>
 
 <ul id="myTooltipDelegate">
 	<li title="is fine">Apricot</li>
@@ -198,7 +220,8 @@ YUI().use(
 {/literal}
 </script>
 
-HTML:
+##### HTML
+
 ```xml
 <ul id="myTooltipDelegate">
 	<li title="is fine">Apricot</li>
@@ -211,7 +234,8 @@ HTML:
 </ul>
 ```
 
-JavaScript:
+##### JavaScript
+
 ```javascript
 YUI().use(
   'aui-tooltip',

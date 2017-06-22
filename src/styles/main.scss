@@ -25,3 +25,15 @@ $accent: #4285F4;
 
 //Viewport
 // @import "examples/viewport"
+
+@media (min-width: 960px) {
+	.col-md-5 {
+			width: 31.25% !important;
+	}
+	.col-md-9 {
+			width: 56.25% !important;
+	}
+	.col-md-offset-2 {
+			margin-left: 12.5% !important;
+	}
+}

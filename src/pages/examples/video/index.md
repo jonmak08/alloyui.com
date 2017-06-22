@@ -179,7 +179,13 @@ YUI().use(
 {/literal}
 </script>
 
-#### JavaScript
+##### HTML
+
+```xml
+<div id="myVideo1"></div>
+```
+
+##### JavaScript
 
 ```javascript
 YUI().use(
@@ -258,7 +264,7 @@ YUI().use(
 {/literal}
 </script>
 
-### HTML
+##### HTML
 
 ```xml
 <div id="myVideo"></div>
@@ -268,7 +274,7 @@ YUI().use(
 <a href="#" class="btn btn-info" id="change-video-btn">Change video</a>
 ```
 
-### JavaScript
+##### JavaScript
 
 ```javascript
 YUI().use(
