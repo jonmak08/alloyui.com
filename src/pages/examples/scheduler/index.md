@@ -230,6 +230,30 @@ For more information about configuration, check out our <a href="http://alloyui.
 
 ## Basic Example
 
+<style>
+{literal}
+#myScheduler {
+  margin: 15px 0;
+}
+.btn {
+  font-size: 14px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+}
+.docs .guide-content table tr th, .docs .guide-content table tr td {
+    border-width: initial;
+    font-size: initial;
+    line-height: initial;
+    padding: initial;
+    vertical-align: initial;
+    height: initial;
+}
+.docs .guide-content table * {
+    border-width: initial !important;
+}
+{/literal}
+</style>
+
 <div id="auiScheduler"></div>
 
 <script type="text/javascript">

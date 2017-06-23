@@ -132,7 +132,7 @@ For more information about configuration, check out our <a href="http://alloyui.
 
 ## Basic Example
 
-<button class="btn btn-primary"><i class="icon-calendar icon-white"></i> Select the date</button>
+<button class="btn btn-primary" id="basic"><i class="icon-calendar icon-white"></i> Select the date</button>
 
 <script type="text/javascript">
 {literal}
@@ -141,7 +141,7 @@ For more information about configuration, check out our <a href="http://alloyui.
     function(Y) {
       new Y.DatePicker(
         {
-          trigger: 'button',
+          trigger: '#basic',
           popover: {
             zIndex: 1
           },
@@ -191,7 +191,7 @@ YUI().use(
 
 ## Multiple Example
 
-<textarea class="form-control" type="text" placeholder="mm/dd/yy">01/07/14 — 01/08/14 — 01/19/14</textarea>
+<textarea class="form-control" id="multiple" type="text" placeholder="mm/dd/yy">01/07/14 — 01/08/14 — 01/19/14</textarea>
 
 <script type="text/javascript">
 {literal}
@@ -200,7 +200,7 @@ YUI().use(
     function(Y) {
       new Y.DatePicker(
         {
-          trigger: 'textarea',
+          trigger: '#multiple',
           mask: '%m/%d/%y',
           calendar: {
             selectionMode: 'multiple'
@@ -250,7 +250,7 @@ YUI().use(
 
 ## Real World Example
 
-<input class="form-control" type="text" placeholder="Day, Mon dd, yyyy" value="水, 9月 04, 2014">
+<input class="form-control" id="realWorld" type="text" placeholder="Day, Mon dd, yyyy" value="水, 9月 04, 2014">
 
 <script type="text/javascript">
 {literal}
@@ -259,7 +259,7 @@ YUI().use(
     function(Y) {
       var datepicker = new Y.DatePicker(
         {
-          trigger: 'input',
+          trigger: '#realWorld',
           mask: '%a, %b %d, %Y',
           popover: {
             toolbars: {

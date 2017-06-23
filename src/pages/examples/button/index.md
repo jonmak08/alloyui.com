@@ -151,6 +151,17 @@ YUI().use(
 
 ## Basic Example
 
+<style>
+{literal}
+.btn.active {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  color: #333;
+}
+{/literal}
+</style>
+
 <button id="myButton"></button>
 <button id="myToggleButton"></button>
 
@@ -338,6 +349,7 @@ YUI().use(
 );
 {/literal}
 </script>
+
 <br>
 
 ##### HTML:
@@ -365,7 +377,7 @@ YUI().use(
 ```
 
 ##### JavaScript:
-```js
+```javascript
 YUI().use(
   'aui-button',
   function(Y) {

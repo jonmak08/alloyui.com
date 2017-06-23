@@ -165,6 +165,14 @@ For more information about configuration, check out our <a href="http://alloyui.
 
 ## Basic Example
 
+<style>
+{literal}
+.popover {
+  z-index: 1 !important;
+}
+{/literal}
+</style>
+
 <br>
 
 <button id="myPopover" class="btn btn-primary">Click here to toggle the popover</button>
@@ -238,7 +246,16 @@ YUI().use(
 
 ## Real World Example
 
+<style>
+{literal}
+.popover {
+    z-index: 10000 !important;
+}
+{/literal}
+</style>
+
 <button id="myPopoverAnim" class="btn btn-primary">Popover with animation</button>
+
 
 <script type="text/javascript">
 {literal}
@@ -251,12 +268,12 @@ YUI().use(
         {
           align: {
             node: triggerAnim,
-            points:[A.WidgetPositionAlign.RC, A.WidgetPositionAlign.LC]
+            points:[A.WidgetPositionAlign.LC, A.WidgetPositionAlign.RC]
           },
           bodyContent: 'Body Content',
           headerContent: 'Header content',
           plugins: [A.Plugin.WidgetAnim],
-          position: 'left'
+          position: 'right'
         }
       ).render();
       triggerAnim.on(
@@ -288,12 +305,12 @@ YUI().use(
       {
         align: {
           node: triggerAnim,
-          points:[A.WidgetPositionAlign.RC, A.WidgetPositionAlign.LC]
+          points:[A.WidgetPositionAlign.LC, A.WidgetPositionAlign.RC]
         },
         bodyContent: 'Body Content',
         headerContent: 'Header content',
         plugins: [A.Plugin.WidgetAnim],
-        position: 'left'
+        position: 'right'
       }
     ).render();
 

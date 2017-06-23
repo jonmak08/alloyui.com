@@ -110,7 +110,6 @@ Node allows you to interact with the DOM in all sorts of ways that would usually
 
 For a full list of the utilities that the node component supplies, check out the `source code`! Most methods explain what they do right there in the code for you.
 
-
 <div class="alert alert-success">
 For more information about configuration, check out our <a href="http://alloyui.com/api/modules/aui-node.html" target="_blank"> Api Docs</a>.
 </div>
@@ -265,11 +264,9 @@ The form below can add as many "job" fields as you need - check out how it does 
           // Create a new Job node and give it an appropriate ID
           var newJob = Y.Node.create(job);
           newJob.attr('id', 'job' + newJobNumber);
-
           // Place the node in its spot in the DOM and populate it
           var lastJob = '#job' + lastJobNumber;
           Y.one(lastJob).placeAfter(newJob);
-
           // Increment the values in case another job is added
           lastJobNumber++;
           newJobNumber++;
@@ -280,7 +277,6 @@ The form below can add as many "job" fields as you need - check out how it does 
         function() {
           // Reset the original number of fields when "Reset" is pressed
           Y.all('#jobForm .added').remove(true);
-
           lastJobNumber = 1;
           newJobNumber = 2;
         }

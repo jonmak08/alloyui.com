@@ -125,25 +125,25 @@ For more information about configuration, check out our <a href="http://alloyui.
 
 <script type="text/javascript">
 {literal}
-  YUI().use(
-    'aui-io-request',
-    function (Y) {
-      Y.io.request(
-        '/data/io/basic-example.html',
-        {
-          on: {
-            success: function() {
-              var data = this.get('responseData');
-              Y.one('#ioButton').on('click',       function() {
-                  alert(data);
-                }
-              );
-            }
+YUI().use(
+  'aui-io-request',
+  function(Y) {
+    Y.io.request(
+      '/files/io/content.html',
+      {
+        on: {
+          success: function() {
+            var data = this.get('responseData');
+            Y.one('#ioButton').on('click', function() {
+                alert(data);
+              }
+            );
           }
         }
-      );
-    }
-  );
+      }
+    );
+  }
+);
 {/literal}
 </script>
 
@@ -153,7 +153,7 @@ YUI().use(
   'aui-io-request',
   function (Y) {
     Y.io.request(
-      'http://alloyui.com/io/data/content.html',
+      'http://alloyui.com/files/io/content.html',
       {
         on: {
           success: function() {
@@ -201,63 +201,7 @@ YUI().use(
 {/literal}
 </style>
 
-<script type="text/javascript">
-{literal}
-  YUI().use(
-    'aui-io-request',
-    'node',
-    function(Y) {
-      Y.io.request(
-        '/data/io/rw-example.json',
-        {
-          dataType: 'json',
-          on: {
-            success: function() {
-              var data = this.get('responseData');
-              states = data.states;
-              states.forEach(function(state) {
-                Y.one('#state').append('<option value"' + state.code + '">' + state.name + '</option>');
-              });
-            }
-          }
-        }
-      );
-      Y.one('#state').on(
-        'change',
-        function() {
-          var cityCode = this.get('value');
-          if (cityCode == 'California') {
-            cityCode = 'ca';
-          } else if (cityCode == 'Alaska') {
-            cityCode = 'al';
-          } else if (cityCode == 'New Jersey') {
-            cityCode = 'nj';
-          }
-          if (cityCode !== '') {
-            Y.io.request(
-              '/data/io/' + cityCode + '.json',
-              {
-                dataType: 'json',
-                on: {
-                  success: function() {
-                    var data = this.get('responseData');
-                    cities = data.cities;
-                    options = '';
-                    cities.forEach(function(city) {
-                      options += '<option value="' + city.name + '">' + city.name + '</option>';
-                    });
-                    Y.one('#city').setHTML(options);
-                  }
-                }
-              }
-            );
-          }
-        }
-      );
-    }
-  );
-{/literal}
-</script>
+<script src="/scripts/real-world/rw-io.js" type="text/javascript"></script>
 <br>
 
 ##### HTML:
@@ -284,7 +228,7 @@ YUI().use(
   function(Y) {
     // create a new asynchonous request to grab all states
     Y.io.request(
-      'http://alloyui.com/io/data/states.json',
+      'http://alloyui.com/files/io/states.json',
       {
         dataType: 'json',
         on: {
@@ -310,7 +254,7 @@ YUI().use(
         if (cityCode !== '') {
           // creates a new asynchronous request to grab the cities corresponding to that state
           Y.io.request(
-            'http://alloyui.com/io/data/' + cityCode + '.json',
+            'http://alloyui.com/files/io/' + cityCode + '.json',
             {
               dataType: 'json',
               on: {

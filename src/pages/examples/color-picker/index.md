@@ -220,6 +220,14 @@ For more information about configuration, check out our <a href="http://alloyui.
 
 ## Basic Example
 
+<style>
+{literal}
+.docs .guide-content li:last-child {
+  margin-bottom: inherit;
+}
+{/literal}
+</style>
+
 <div id="myColorPalette"></div>
 
 <script type="text/javascript">
@@ -255,6 +263,37 @@ YUI().use(
 
 ## HSV Palette Example
 
+<style>
+{literal}
+.col-sm-2 {
+		width: 16.66666667%;
+	}
+	.col-sm-6 {
+		width: 50%;
+	}
+	.col-sm-10 {
+		width: 83.33333333%;
+	}
+	.col-xs-6 {
+		width: 50%;
+	}
+@media (min-width: 768px)
+	.col-sm-2 {
+		width: 16.66666667%;
+	}
+	.col-sm-6 {
+		width: 50%;
+	}
+	.col-sm-10 {
+		width: 83.33333333%;
+	}
+	.col-xs-6 {
+		width: 50%;
+	}
+}
+{/literal}
+</style>
+
 <div id="myHsvPalette" style="padding-left: 10px;"></div>
 
 <script type="text/javascript">
@@ -286,7 +325,7 @@ YUI().use(
 
 </article>
 
-<article id="5">
+<article id="6">
 
 ## Popover Example
 

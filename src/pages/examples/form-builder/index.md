@@ -157,6 +157,37 @@ For more information about configuration, check out our <a href="http://alloyui.
 
 ## Basic Example
 
+<style>
+{literal}
+.diagram-builder-drop-container, .diagram-builder-canvas, .diagram-builder-content-container {
+	height: auto;
+	min-height: 600px;
+}
+.icon {
+  background-repeat: no-repeat;
+}
+.nav {
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+	.col-md-4 {
+		width: 33.33333333%;
+	}
+	.col-md-8 {
+		width: 66.66666667%;
+	}
+}
+@media (min-width: 768px) {
+	.col-sm-6 {
+		width: 50%;
+	}
+}
+.col-xs-12 {
+  width: 100%;
+}
+{/literal}
+</style>
+
 <div id="myFormBuilder"></div>
 
 <script type="text/javascript">

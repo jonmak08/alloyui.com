@@ -94,7 +94,7 @@ YUI().use(
 ```
 
 <div class="alert alert-success">
-	For more information about configuration, check out our <a href="http://alloyui.com/api/modules/aui-char-counter.html" target="_blank"> Api Docs</a>.
+  For more information about configuration, check out our <a href="http://alloyui.com/api/modules/aui-char-counter.html" target="_blank"> Api Docs</a>.
 </div>
 
 </article>
@@ -168,8 +168,35 @@ YUI().use(
 
 ## Real World Example
 
-<textarea id="myTextarea" class="form-control"></textarea>
-<p id="myCounter"></p>
+<style>
+{literal}
+.twitter-box {
+  position: relative;
+  width: 530px;
+  height: 211px;
+  background: url(/files/char-counter/twitter-box.png);
+}
+#myCounter {
+  position: absolute;
+  bottom: 15px;
+  right: 95px;
+  text-align: center;
+  color: #999;
+}
+#myTextarea {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  width: 490px;
+  height: 75px;
+}
+{/literal}
+</style>
+
+<div class="twitter-box">
+  <textarea id="myTextarea" class="form-control"></textarea>
+  <p id="myCounter"></p>
+</div>
 
 <script type="text/javascript">
 {literal}

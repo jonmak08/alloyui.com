@@ -141,6 +141,26 @@ For more information about configuration, check out our <a href="http://alloyui.
 
 ## Basic Example
 
+<style>
+{literal}
+#myList li {
+  cursor: move;
+}
+.placeholder {
+  background: #fff;
+  height: 30px;
+  border: 1px dashed #ccc !important;
+  opacity: .5;
+}
+.yui-dd-dragging {
+  visibility: hidden;
+}
+.helper-hidden {
+  display: none;
+}
+{/literal}
+</style>
+
 <p>The list elements below are not in order. Order them using simple drag and drop!</p>
 
 <ol id="myList">

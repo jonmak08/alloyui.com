@@ -93,7 +93,7 @@ YUI().use(
 Try out different offset values in your Affix instance to finetune the behavior.
 
 <div class="alert alert-success">
-	For more information about configuration, check out our <a href="http://alloyui.com/api/modules/aui-affix.html" target="_blank"> Api Docs</a>.
+	For more information about configuration, check out our <a href="http://alloyui.com/api/modules/aui-affix.html" target="_blank">Api Docs</a>.
 </div>
 
 </article>
@@ -101,7 +101,6 @@ Try out different offset values in your Affix instance to finetune the behavior.
 <article id="4">
 
 ## Basic Example
-
 
 <div id="myAffix" class="navbar navbar-default">
   <ul class="nav navbar-nav">
@@ -111,11 +110,11 @@ Try out different offset values in your Affix instance to finetune the behavior.
   </ul>
 </div>
 
-<article>
+<div>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur labore dicta quas ab nesciunt dolorum non ipsum facilis cum, nam qui autem ducimus cupiditate quibusdam sunt excepturi accusantium doloribus, libero esse quam. Quidem harum dolorum vero nulla, eius, officiis saepe voluptate similique corporis vel id perferendis? Dicta deserunt, voluptatum repellendus voluptates, aut, asperiores fugiat laudantium dolorem consectetur sunt mollitia. Veritatis quisquam placeat harum, perferendis soluta eius nihil veniam totam sint. Suscipit, voluptates, possimus! Accusamus modi eaque, eius nisi saepe iusto repellat qui ipsam molestiae sunt impedit reiciendis velit nostrum sint odio omnis repellendus culpa voluptatum quam eveniet numquam quod placeat.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur labore dicta quas ab nesciunt dolorum non ipsum facilis cum, nam qui autem ducimus cupiditate quibusdam sunt excepturi accusantium doloribus, libero esse quam. Quidem harum dolorum vero nulla, eius, officiis saepe voluptate similique corporis vel id perferendis? Dicta deserunt, voluptatum repellendus voluptates, aut, asperiores fugiat laudantium dolorem consectetur sunt mollitia. Veritatis quisquam placeat harum, perferendis soluta eius nihil veniam totam sint. Suscipit, voluptates, possimus! Accusamus modi eaque, eius nisi saepe iusto repellat qui ipsam molestiae sunt impedit reiciendis velit nostrum sint odio omnis repellendus culpa voluptatum quam eveniet numquam quod placeat.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur labore dicta quas ab nesciunt dolorum non ipsum facilis cum, nam qui autem ducimus cupiditate quibusdam sunt excepturi accusantium doloribus, libero esse quam. Quidem harum dolorum vero nulla, eius, officiis saepe voluptate similique corporis vel id perferendis? Dicta deserunt, voluptatum repellendus voluptates, aut, asperiores fugiat laudantium dolorem consectetur sunt mollitia. Veritatis quisquam placeat harum, perferendis soluta eius nihil veniam totam sint. Suscipit, voluptates, possimus! Accusamus modi eaque, eius nisi saepe iusto repellat qui ipsam molestiae sunt impedit reiciendis velit nostrum sint odio omnis repellendus culpa voluptatum quam eveniet numquam quod placeat.</p>
-</article>
+</div>
 
 <style>
 {literal}
@@ -129,22 +128,25 @@ Try out different offset values in your Affix instance to finetune the behavior.
 
 <script type="text/javascript">
 {literal}
-  YUI().use(
-    'aui-affix',
-    function(Y) {
-      new Y.Affix(
-        {
-          target: '#myAffix',
-          offsetTop: Y.one('#myAffix').getY()
-        }
-      );
-    }
-  );
+YUI().use(
+	'aui-affix',
+	function(Y) {
+		var boxTop = Y.one('#myAffix').getY();
+		new Y.Affix(
+			{
+				target: '#myAffix',
+				offsetTop: boxTop
+			}
+		);
+	}
+);
 {/literal}
 </script>
+
 <br>
 
 ##### HTML:
+
 ```xml
 <style>
 .navbar.affix {
@@ -170,6 +172,7 @@ Try out different offset values in your Affix instance to finetune the behavior.
 ```
 
 ##### JavaScript:
+
 ```javascript
 YUI().use(
   'aui-affix',

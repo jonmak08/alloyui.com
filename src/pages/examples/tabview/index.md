@@ -411,7 +411,7 @@ YUI().use(
 
 ## Stacked Example
 
-Here you can see some staked tabs.
+Here you can see some stacked tabs.
 
 <div id="stackedTab"></div>
 

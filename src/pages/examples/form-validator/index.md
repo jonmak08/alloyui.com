@@ -194,33 +194,30 @@ For more information about configuration, check out our <a href="http://alloyui.
 
 ## Basic Example
 
-<form id="auiForm">
-
+{literal}
+<form id="auiForm" onsubmit="return false">
   <div class="form-group">
     <label class="control-label" for="name">Name:</label>
     <div class="controls">
       <input name="name" id="name" class="form-control field-required" type="text">
     </div>
   </div>
-
   <div class="form-group">
     <label class="control-label" for="age">Age:</label>
     <div class="controls">
       <input name="age" id="age" class="form-control field-required field-digits" type="text">
     </div>
   </div>
-
   <div class="form-group">
     <label class="control-label" for="email">E-mail:</label>
     <div class="controls">
       <input name="email" id="email" class="form-control field-required field-email" type="text">
     </div>
   </div>
-
   <input class="btn btn-info" type="submit" value="Submit">
   <input class="btn btn-primary" type="reset" value="Reset">
-
 </form>
+{/literal}
 
 <script type="text/javascript">
 {literal}

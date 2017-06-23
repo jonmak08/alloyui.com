@@ -173,7 +173,15 @@ YUI().use(
 
 ## Real World Example
 
-<div id="myProgressBar" class="aui-progress-warning"></div>
+<style>
+{literal}
+.docs .guide-content .progress-example p:not([class]) {
+  color: #DDD;
+}
+{/literal}
+</style>
+
+<div id="myProgressBar" class="aui-progress-warning progress-example"></div>
 
 <script type="text/javascript">
 {literal}
@@ -242,7 +250,7 @@ YUI().use(
 
 ## Vertical Example
 
-<div id="verticalProgressBar" class="progress-success"></div>
+<div id="verticalProgressBar" class="progress-success progress-example"></div>
 
 <script type="text/javascript">
 {literal}

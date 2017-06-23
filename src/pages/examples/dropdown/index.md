@@ -127,6 +127,7 @@ For more information about configuration, check out our <a href="http://alloyui.
   );
 {/literal}
 </script>
+
 <br>
 
 ##### HTML:
@@ -163,20 +164,20 @@ YUI().use(
 
 ## Real World Example
 
-<nav class="navbar navbar-default">
+<div class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-collapse">
       <ul class="nav navbar-nav">
         <li id="myDropdown" class="dropdown">
-          <a id="myTrigger" href="#" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
+          <a id="myTrigger" href="javascript:;" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
           <ul class="dropdown-menu" style="padding: 8px">
-            I only close on escape
+            <span>I only close on escape</span>
           </ul>
         </li>
       </ul>
     </div>
   </div>
-</nav>
+</div>
 
 <script type="text/javascript">
 {literal}

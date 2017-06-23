@@ -284,6 +284,55 @@ YUI().use(
 
 ## Real World Example
 
+<style>
+{literal}
+.paginator {
+	margin-left: 20px;
+}
+.paginator-link {
+	background-color: #FFF;
+	border: 1px solid #CCCCCC;
+	padding: 3px 6px;
+}
+.paginator-link:hover {
+	background-color: #0088CC;
+	border: none;
+	color: #FFF;
+	padding: 4px 7px;
+	text-decoration: none;
+}
+.paginator-current-page, .paginator-current-page:hover {
+	background-color: #8F8F8F;
+	border: none;
+	color: #FFF;
+	padding: 4px 7px;
+}
+.paginator-rows-per-page {
+	display: none;
+}
+.request {
+	background-color: #FFF;
+	border: 1px solid #CBCBCB;
+	margin: 10px;
+	padding: 10px;
+}
+.content div {
+  display: none;
+}
+.content div:first-child {
+  display: block;
+}
+.pagination > .active > a, .pagination > .active > a:focus {
+  background-color: #428bca;
+  border-color: #428bca;
+}
+.docs .guide-content a:not([class]):focus {
+    border-color: #4285F4;
+    color: #000;
+}
+{/literal}
+</style>
+
 <div class="content">
   <div>
     <h4>Page 1</h4>
@@ -325,7 +374,6 @@ YUI().use(
               var instance = this,
                   state = event.state,
                   lastState = event.lastState;
-
               if (lastState) {
                   pages.item(lastState.page - 1).setStyle('display', 'none');
               }
