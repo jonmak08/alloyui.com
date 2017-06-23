@@ -181,36 +181,36 @@ Drag and drop files to different locations
 
 <style>
 {literal}
-  #auiSortableLayout {
-    background-color: #F7F7F7;
-    border: 1px solid #EEE;
-    margin: 10px 4px;
-    padding: 10px;
-  }
-  .portlet {
-    background-color: #EAEAEE;
-    border: 1px solid #DADADE;
-    border-top-color: #F0F0FE;
-    cursor: move;
-    margin: 5px 0;
-    padding: 0 10px;
-  }
+#auiSortableLayout {
+  background-color: #F7F7F7;
+  border: 1px solid #EEE;
+  margin: 10px 4px;
+  padding: 10px;
+}
+.portlet {
+  background-color: #EAEAEE;
+  border: 1px solid #DADADE;
+  border-top-color: #F0F0FE;
+  cursor: move;
+  margin: 5px 0;
+  padding: 0 10px;
+}
 {/literal}
 </style>
 
 <script type="text/javascript">
 {literal}
-  YUI().use(
-    'aui-sortable-layout',
-    function(Y) {
-      new Y.SortableLayout(
-        {
-          dragNodes: '.portlet',
-          dropNodes: '#auiSortableLayout'
-        }
-      );
-    }
-  );
+YUI().use(
+  'aui-sortable-layout',
+  function(Y) {
+    new Y.SortableLayout(
+      {
+        dragNodes: '.portlet',
+        dropNodes: '#auiSortableLayout'
+      }
+    );
+  }
+);
 {/literal}
 </script>
 <br>
@@ -257,143 +257,206 @@ YUI().use(
 <div id="mySortableLayout">
   <div class="column">
     <div class="portlet">
-      <h5>Column 1 Portlet 1</h5>
-      <p>Lorem Ipsum dummy content</p>
+      <span class="portlet-title">Column 1 Portlet 1</span>
+      <p class="portlet-body">Lorem Ipsum dummy content</p>
     </div>
     <div class="portlet">
-      <h5>Column 1 Portlet 2</h5>
-      <p>Lorem Ipsum dummy content</p>
+      <span class="portlet-title">Column 1 Portlet 2</span>
+      <p class="portlet-body">Lorem Ipsum dummy content</p>
     </div>
     <div class="portlet">
-      <h5>Column 1 Portlet 3</h5>
-      <p>Lorem Ipsum dummy content</p>
+      <span class="portlet-title">Column 1 Portlet 3</span>
+      <p class="portlet-body">Lorem Ipsum dummy content</p>
     </div>
   </div>
   <div class="column">
     <div class="portlet">
-      <h5>Column 2 Portlet 1</h5>
-      <p>Lorem Ipsum dummy content</p>
+      <span class="portlet-title">Column 2 Portlet 1</span>
+      <p class="portlet-body">Lorem Ipsum dummy content</p>
     </div>
     <div class="portlet">
-      <h5>Column 2 Portlet 2</h5>
-      <p>Lorem Ipsum dummy content</p>
+      <span class="portlet-title">Column 2 Portlet 2</span>
+      <p class="portlet-body">Lorem Ipsum dummy content</p>
     </div>
     <div class="portlet">
-      <h5>Column 2 Portlet 3</h5>
-      <p>Lorem Ipsum dummy content</p>
+      <span class="portlet-title">Column 2 Portlet 3</span>
+      <p class="portlet-body">Lorem Ipsum dummy content</p>
     </div>
   </div>
   <div class="column">
     <div class="portlet">
-      <h5>Column 3 Portlet 1</h5>
-      <p>Lorem Ipsum dummy content</p>
+      <span class="portlet-title">Column 3 Portlet 1</span>
+      <p class="portlet-body">Lorem Ipsum dummy content</p>
     </div>
     <div class="portlet">
-      <h5>Column 3 Portlet 2</h5>
-      <p>Lorem Ipsum dummy content</p>
+      <span class="portlet-title">Column 3 Portlet 2</span>
+      <p class="portlet-body">Lorem Ipsum dummy content</p>
     </div>
     <div class="portlet">
-      <h5>Column 3 Portlet 3</h5>
-      <p>Lorem Ipsum dummy content</p>
+      <span class="portlet-title">Column 3 Portlet 3</span>
+      <p class="portlet-body">Lorem Ipsum dummy content</p>
     </div>
   </div>
+</div>
+<div class="sidebar-portlets">
+  <div class="portlet-item blue" id="blue">New Portlet</div>
+  <div class="portlet-item green" id="green">New Portlet</div>
+  <div class="portlet-item red" id="red">New Portlet</div>
+  <div class="portlet-item yellow" id="yellow">New Portlet</div>
 </div>
 
 <div class="clearfix"></div>
 
 <style>
 {literal}
-  #mySortableLayout * {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  .column {
-    background-color: #F7F7F7;
-    border: 1px solid #EEE;
-    clear: none;
-    float: left;
-    margin: 10px 5px;
-    padding: 10px;
-    width: 31%;
-  }
+#mySortableLayout *, .sidebar-portlets * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.column {
+  background-color: #F7F7F7;
+  border: 1px solid #EEE;
+  clear: none;
+  float: left;
+  margin: 4px;
+  padding: 4px;
+  width: 25.3%;
+}
+.portlet {
+  background-color: #EAEAEE;
+  border: 1px solid #DADADE;
+  border-top-color: #F0F0FE;
+  cursor: move;
+  margin: 4px 0;
+  padding: 0 4px;
+}
+.portlet-title {
+	font-size: 10px;
+	font-weight: bold;
+}
+.portlet-body {
+	font-size: 10px;
+}
+.sidebar-portlets {
+  background-color: #F0F0FA;
+  border: 1px solid #E0E0E0;
+  border-top-color: #CCC;
+  border-bottom-color: #F3F3F3;
+  float: right;
+  margin: 4px;
+  padding: 4px;
+  max-width: 15%;
+}
+.sidebar-portlets * {
+  max-width: 100%;
+}
+.portlet-item {
+  cursor: move;
+  color: #FFF;
+	font-size: 10px;
+  font-weight: bold;
+  margin: 4px 0;
+  padding: 4px;
+  text-align: center;
+  text-shadow: 0 1px 1px #000, 0 0 2px #000;
+}
+.blue {
+  background-color: #BBF;
+}
+.green {
+  background-color: #AFA;
+}
+.red {
+  background-color: #FBB;
+}
+.yellow {
+  background-color: #FFF5AA;
+}
+.portal-layout-proxy {
+  border: 1px solid #000;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 0 #888;
+  background-color: #555;
+  opacity: .3;
+}
 {/literal}
 </style>
 
 <script type="text/javascript">
 {literal}
-  YUI().use(
-    'aui-sortable-layout',
-    function(Y) {
-      var proxyNode = Y.Node.create('<div class="sortable-layout-proxy"></div>');
-      var DDM = Y.DD.DDM;
-      var sortableLayout = new Y.SortableLayout(
-        {
-          dragNodes: '.portlet',
-          dropContainer: '#mySortableLayout',
-          proxyNode: proxyNode
+YUI().use(
+  'aui-sortable-layout',
+  function(Y) {
+    var proxyNode = Y.Node.create('<div class="sortable-layout-proxy"></div>');
+    var DDM = Y.DD.DDM;
+    var sortableLayout = new Y.SortableLayout(
+      {
+        dragNodes: '.portlet',
+        dropContainer: '#mySortableLayout',
+        proxyNode: proxyNode
+      }
+    );
+    //Create new constructor for Portlet adding widget
+    var PortletItem = function() {
+      PortletItem.superclass.constructor.apply(this, arguments);
+    };
+    PortletItem.NAME = 'PortletItem';
+    PortletItem.ATTRS = {
+      dd: {
+        value: false
+      },
+      delegateConfig: {
+        value: {
+          nodes: '.portlet-item',
+          target: false
         }
-      );
-      //Create new constructor for Portlet adding widget
-      var PortletItem = function() {
-        PortletItem.superclass.constructor.apply(this, arguments);
-      };
-      PortletItem.NAME = 'PortletItem';
-      PortletItem.ATTRS = {
-        dd: {
-          value: false
-        },
-        delegateConfig: {
-          value: {
-            nodes: '.portlet-item',
-            target: false
-          }
-        },
-        itemContainer: {
-          value: '.sidebar'
-        },
-        proxyNode: {
-          value: proxyNode
+      },
+      itemContainer: {
+        value: '.sidebar'
+      },
+      proxyNode: {
+        value: proxyNode
+      }
+    };
+    //Extend widget to clone itself when dragged
+    var color = '';
+    Y.extend(
+      PortletItem,
+      Y.SortableLayout,
+      {
+        _getAppendNode: function() {
+          var instance = this;
+          instance.appendNode = DDM.activeDrag.get('node').clone();
+          color = instance.appendNode.get('id');
+          return instance.appendNode;
         }
-      };
-      //Extend widget to clone itself when dragged
-      var color = '';
-      Y.extend(
-        PortletItem,
-        Y.SortableLayout,
-        {
-          _getAppendNode: function() {
-            var instance = this;
-            instance.appendNode = DDM.activeDrag.get('node').clone();
-            color = instance.appendNode.get('id');
-            return instance.appendNode;
-          }
+      }
+    );
+    var portletList = new PortletItem();
+    //Create new node which replaces clone and add drop plugin to new node
+    var livePortlet;
+    portletList.on(
+      'drag:end',
+      function(event) {
+        var newPortlet = Y.Node.create('<div class="portlet ' + color + '">New Portlet</div>');
+        var dropConfig = {
+          bubbleTargets: this,
+          useShim: false
+        };
+        if (portletList.appendNode && portletList.appendNode.inDoc()) {
+          portletList.appendNode.replace(newPortlet);
+          var livePortlet = Y.one('.' + color);
+          livePortlet.plug(Y.Plugin.Drop, dropConfig);
+          livePortlet.drop.set('groups', ['portal-layout']);
         }
-      );
-      var portletList = new PortletItem();
-      //Create new node which replaces clone and add drop plugin to new node
-      var livePortlet;
-      portletList.on(
-        'drag:end',
-        function(event) {
-          var newPortlet = Y.Node.create('<div class="portlet ' + color + '">New Portlet</div>');
-          var dropConfig = {
-            bubbleTargets: this,
-            useShim: false
-          };
-          if (portletList.appendNode && portletList.appendNode.inDoc()) {
-            portletList.appendNode.replace(newPortlet);
-            var livePortlet = Y.one('.' + color);
-            livePortlet.plug(Y.Plugin.Drop, dropConfig);
-            livePortlet.drop.set('groups', ['portal-layout']);
-          }
-        }
-      );
-    }
-  );
+      }
+    );
+  }
+);
 {/literal}
 </script>
 <br>
@@ -443,6 +506,12 @@ YUI().use(
       <p>Lorem Ipsum dummy content</p>
     </div>
   </div>
+</div>
+<div class="sidebar-portlets">
+  <div class="portlet-item blue" id="blue">New Portlet</div>
+  <div class="portlet-item green" id="green">New Portlet</div>
+  <div class="portlet-item red" id="red">New Portlet</div>
+  <div class="portlet-item yellow" id="yellow">New Portlet</div>
 </div>
 
 <div class="clearfix"></div>
